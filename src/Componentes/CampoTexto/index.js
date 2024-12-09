@@ -1,9 +1,10 @@
 import "./campoTexto.css"
 
-function CampoTexto() {
-    return <div>
+function CampoTexto(datosExternos) {
+    console.log('datos:', datosExternos)
+    return <div className="campo-texto">
         <label>Nombre</label>
-        <input placeholder= "" />
+        <input placeholder= "Ingrese el nombre" />
     </div>
 }
 
