@@ -5,9 +5,9 @@ function Formulario() {
     return <section className='formulario'>
                    <form >
                         <h2>Rellena el formulario para crear el colaborador</h2>
-                        <CampoTexto />
-                        <CampoTexto />
-                        <CampoTexto />
+                        <CampoTexto titulo="nombre" placeholder="ingrese su nombre..."/>
+                        <CampoTexto titulo="puesto" placeholder="ingrese su puesto"/>
+                        <CampoTexto titulo="foto" placeholder="ingrese enlace de foto"/> 
                    </form>
            </section>   
 }
