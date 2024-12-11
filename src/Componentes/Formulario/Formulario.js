@@ -1,5 +1,7 @@
 import CampoTexto from "../CampoTexto/index"
+import ListaOpciones from "../ListaOpciones";
 import "./formulario.css"
+
 
 function Formulario() {
     return <section className='formulario'>
@@ -8,6 +10,7 @@ function Formulario() {
                         <CampoTexto titulo="nombre" placeholder="ingrese su nombre..."/>
                         <CampoTexto titulo="puesto" placeholder="ingrese su puesto"/>
                         <CampoTexto titulo="foto" placeholder="ingrese enlace de foto"/> 
+                        <ListaOpciones titulo="Equipo" placeholder="ingrese el equipo"/> 
                    </form>
            </section>   
 }
