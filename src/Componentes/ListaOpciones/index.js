@@ -14,8 +14,8 @@ const ListaOpciones = ()=>{
     return <div className="lista-opciones">
                <label>Equipo</label> 
                <select>
-                    {equipos.map((equipo)=>{
-                        return <option>{equipo}</option>
+                    {equipos.map((equipo,index)=>{
+                        return <option key={index}>{equipo}</option>
                     })}                   
                </select>
            </div>
