@@ -1,6 +1,6 @@
 import "./Boton.css"
-const Boton = () =>{
-    return <button className="boton">Crear</button>
+const Boton = (props) =>{
+    return <button className="boton">{props.texto}</button>
 }
 
 export default Boton
