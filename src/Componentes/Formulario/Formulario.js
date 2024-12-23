@@ -15,9 +15,9 @@ function Formulario() {
     return <section className='formulario'>
                    <form onSubmit={manejarEnvio}>
                         <h2>Rellena el formulario para crear el colaborador</h2>
-                        <CampoTexto titulo="nombre" placeholder="ingrese su nombre..."/>
-                        <CampoTexto titulo="puesto" placeholder="ingrese su puesto"/>
-                        <CampoTexto titulo="foto" placeholder="ingrese enlace de foto"/> 
+                        <CampoTexto titulo="nombre" placeholder="ingrese su nombre..." required/>
+                        <CampoTexto titulo="puesto" placeholder="ingrese su puesto"required/>
+                        <CampoTexto titulo="foto" placeholder="ingrese enlace de foto" required/> 
                         <ListaOpciones titulo="Equipo" placeholder="ingrese el equipo"/> 
                         <Boton texto="Crear"/>
                    </form>
