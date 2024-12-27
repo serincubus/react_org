@@ -5,10 +5,12 @@ import Formulario from './Componentes/Formulario/Formulario.js'
 import MiOrg from "./Componentes/MiOrg"
 
 function App() {
+
+  const [mostrarFormulario, actualizarMostrar]=useState(true);
   return (
     <div className="App">
       <Header />
-      <Formulario />
+      {mostrarFormulario === true ? <Formulario /> : <div></ div>}
       <MiOrg />
              
     </div>
