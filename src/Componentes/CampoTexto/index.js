@@ -8,7 +8,7 @@ function CampoTexto(props) {
  
      const manejarCambio= (e)=>{
         console.log("cambio", e.target.value);
-        actualizarValor(e.target.value)
+        props.actualizarValor(e.target.value)
         
      }   
 
@@ -17,7 +17,7 @@ function CampoTexto(props) {
         <input 
             placeholder={placeholderModificado} 
             required={props.required} 
-            value={valor}
+            value={props.valor}
             onChange={manejarCambio}
             />
 
