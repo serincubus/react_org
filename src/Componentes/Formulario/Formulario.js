@@ -5,15 +5,26 @@ import "./formulario.css";
 import Boton from "../Boton"
 
 
-function Formulario() {
+function Formulario(props) {
 
       const [nombre, actualizarNombre]=useState("");
       const [puesto, actualizarPuesto]=useState("");
-      const [foto, actualizarFoto]=useState("")
+      const [foto, actualizarFoto]=useState("");
+      const [equipo, actualizarEquipo]=useState("");
+
+      const {registrarColaborador}= props
+      
 
     const manejarEnvio =(e)=>{
          e.preventDefault()
-       console.log('manejar evento',e)
+       console.log('manejar el envio')
+       let datosAEnviar= {
+            nombre,
+            puesto,
+            foto,
+            equipo
+       }
+       registrarColaborador(datosAEnviar)
 
     }
 
@@ -42,8 +53,9 @@ function Formulario() {
                               required
                          /> 
                         <ListaOpciones 
-                              titulo="Equipo" 
-                              placeholder="ingrese el equipo"
+                              valor={equipo} 
+                              actualizarEquipo={actualizarEquipo}
+                              equipos={props.equipos}
                          /> 
                         <Boton texto="Crear"/>
                    </form>
