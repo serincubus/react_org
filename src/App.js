@@ -88,14 +88,20 @@ function App() {
    const registrarColaborador= (colaborador)=>{
         console.log("nuevo colaborador", colaborador);
 
-        //spreed operator
-        actualizarColaboradores([...colaboradores, colaborador])
-   }
+       //spreed operator
+     actualizarColaboradores([...colaboradores, colaborador])
+    }
 
-   const eliminarColaborador=()=>{
+   const eliminarColaborador=(nombreColaborador)=>{
+    const colaboradoresActualizados=colaboradores.filter((colaborador)=>colaborador.nombre!==nombreColaborador)
     console.log("eliminar colaborador");
+
+    actualizarColaboradores(colaboradoresActualizados)
     
    }
+
+    
+   
 
    const actualizarColor=(color,titulo)=>{
            console.log("actualizar:", color, titulo);
