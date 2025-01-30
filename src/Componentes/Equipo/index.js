@@ -22,7 +22,7 @@ const Equipo=(props)=>{
             <input
               type='color'
               className="input-color"
-              value={colorSecundario}
+              value={colorPrimario}
               onChange={(evento)=>
                 actualizarColor(evento.target.value, titulo)
                 

@@ -106,16 +106,14 @@ function App() {
    const actualizarColor=(color,titulo)=>{
            console.log("actualizar:", color, titulo);
         const equiposActualizados = equipos.map((equipo)=>{
-          if(equipos.titulo===titulo){
-            equipo.colorPrimario = color
+          if(equipo.titulo===titulo){
+            return {...equipo, colorPrimario:color}
           }
           return equipo
         })  
         actualizarEquipos(equiposActualizados)
    }
-
    
-
 
   return (
     <div className="App">
